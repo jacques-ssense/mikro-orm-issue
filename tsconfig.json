@@ -1,0 +1,36 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "preserveConstEnums": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "strictNullChecks": false,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "removeComments": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "alwaysStrict": true,
+    "sourceMap": true,
+    "target": "es2019",
+    "outDir": ".build",
+    "moduleResolution": "node",
+    "lib": [
+      "es2019"
+    ],
+    "rootDir": "./",
+    "types": [
+      "reflect-metadata",
+      "node",
+      "jest"
+    ],
+    "module": "commonjs",
+    "allowJs": false,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ]
+  }
+}

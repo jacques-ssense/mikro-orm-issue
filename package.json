@@ -1,0 +1,33 @@
+{
+  "name": "mikro-orm-issue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:sqlite:passes": "jest custom-type-as-primary-key.test.ts",
+    "test:sqlite:fails": "jest custom-type-as-primary-key-of-items.test.ts",
+    "test:postgres:passes": "USE_POSTGRES=1 jest custom-type-as-primary-key.test.ts",
+    "test:postgres:fails": "USE_POSTGRES=1 jest custom-type-as-primary-key-of-items.test.ts",
+    "test:sqlite": "npm run test:sqlite:passes ; npm run test:sqlite:fails",
+    "test:postgres": "npm run test:postgres:passes ; npm run test:postgres:fails",
+    "test": "npm run test:sqlite ; npm run test:postgres"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mikro-orm/core": "^4.2.3",
+    "@mikro-orm/postgresql": "^4.2.3",
+    "@mikro-orm/reflection": "^4.2.3",
+    "@mikro-orm/sqlite": "^4.2.3"
+  },
+  "devDependencies": {
+    "@mikro-orm/cli": "^4.2.1",
+    "@mikro-orm/sqlite": "^4.2.1",
+    "@types/jest": "^26.0.15",
+    "jest": "^26.6.0",
+    "ts-jest": "^26.4.1",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  }
+}
