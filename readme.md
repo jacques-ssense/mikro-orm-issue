@@ -10,14 +10,4 @@ docker-compose up
 npm t
 ```
 
-This will run 4 tests:
-
-- 2 tests using sqlite.
-    - one fails
-    - one passes
-
-- 2 tests using postgres.
-    - one fails
-    - one passes
-
-They fail for different reasons.
+All tests should pass when using version 4.2.4-dev.81 of mikro-orm.

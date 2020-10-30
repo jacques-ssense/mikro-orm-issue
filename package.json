@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:sqlite:passes": "jest custom-type-as-primary-key.test.ts",
-    "test:sqlite:fails": "jest custom-type-as-primary-key-of-items.test.ts",
-    "test:postgres:passes": "USE_POSTGRES=1 jest custom-type-as-primary-key.test.ts",
-    "test:postgres:fails": "USE_POSTGRES=1 jest custom-type-as-primary-key-of-items.test.ts",
+    "test:sqlite:passes": "jest --runInBand custom-type-as-primary-key.test.ts custom-type-as-primary-key-of-items.test.ts",
+    "test:postgres:passes": "USE_POSTGRES=1 jest --runInBand custom-type-as-primary-key.test.ts custom-type-as-primary-key-of-items.test.ts",
+    "test:sqlite:fails": "echo",
+    "test:postgres:fails": "USE_POSTGRES=1 echo",
     "test:sqlite": "npm run test:sqlite:passes ; npm run test:sqlite:fails",
     "test:postgres": "npm run test:postgres:passes ; npm run test:postgres:fails",
     "test": "npm run test:sqlite ; npm run test:postgres"
@@ -16,10 +16,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@mikro-orm/core": "^4.2.3",
-    "@mikro-orm/postgresql": "^4.2.3",
-    "@mikro-orm/reflection": "^4.2.3",
-    "@mikro-orm/sqlite": "^4.2.3"
+    "@mikro-orm/core": "4.2.4-dev.81",
+    "@mikro-orm/postgresql": "4.2.4-dev.81",
+    "@mikro-orm/reflection": "4.2.4-dev.81",
+    "@mikro-orm/sqlite": "4.2.4-dev.81"
   },
   "devDependencies": {
     "@mikro-orm/cli": "^4.2.1",

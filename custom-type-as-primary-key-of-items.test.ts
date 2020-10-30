@@ -140,12 +140,12 @@ describe('persistAndFlush', () => {
         await reconstructSchema(orm);
     });
 
-    it('fails', async () => {
+    it('passes', async () => {
         const product = Product.create('product-id');
         product.addItem(ProductItem.create(SKU.create('ABC')));
         expect(product.items[0].sku).toBeInstanceOf(SKU);
-        await expect(orm.em.persistAndFlush(product)).resolves.not.toThrow(); // <-- fails when using sqlite
-        expect(product.items[0].sku).toBeInstanceOf(SKU); // <-- fails when using postgres
+        await expect(orm.em.persistAndFlush(product)).resolves.not.toThrow();
+        expect(product.items[0].sku).toBeInstanceOf(SKU);
     });
 
     afterAll(async () => {
